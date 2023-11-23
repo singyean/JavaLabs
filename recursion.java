@@ -1,15 +1,26 @@
+import java.util.Scanner;
 public class recursion {
   public static void main(String[] args) {
+    // Create a scanner
+    Scanner input = new Scanner(System.in);
+    System.out.print("Enter text: ");
+    String text = input.nextLine();
 
-    //call your recursion fuction
-    //print result
+    // Display the reverse string
+    System.out.println("The reverse text is " + reverseString(text));
+   
 
    }
     
-    public double.... recursionFunction {
+    public static String reverseString(String text) {
       //implement your case algorithm
-      return....
+      if (text.length() <= 1) 
+        return text;
+      else 
+        return text.charAt(text.length() - 1) + reverseString(text.substring(0, text.length() - 1));
+      
     }
+      
   
 }
     
